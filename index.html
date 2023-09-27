@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./Img/Checklist.png" />
+    <link rel="stylesheet" href="./Css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+    <section class="Section">
+        <h1>Lista de Tareas</h1>
+        <div class="ContentInput">
+            <input type="text" id="taskInput" placeholder="Escribe una tarea">
+            <button id="addTaskButton">Añadir</button>
+        </div>
+
+        <div id="todo-list">
+            <!-- Aquí se mostrarán las tareas -->
+        </div>
+    </section>
+    
+    <!-- Modal de Bootstrap para editar tarea -->
+    <div class="modal fade" id="editTaskModal" tabindex="-1" role="dialog" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editTaskModalLabel">Editar Tarea</h5>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="editedTaskText" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="saveEditButton">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de Bootstrap para confirmar la eliminación -->
+    <div class="modal fade" id="deleteTaskModal" tabindex="-1" role="dialog" aria-labelledby="deleteTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="deleteTaskModalLabel">Confirmar Eliminación</h5>
+                </div>
+                <div class="modal-body">
+                    ¿Estás seguro de que deseas eliminar esta tarea?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" id="confirmDeleteButton">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./JavaScript/Script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
